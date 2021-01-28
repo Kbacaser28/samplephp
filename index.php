@@ -1,11 +1,8 @@
 <?php
-    $dbhost = 'localhost';
-    $dbname ='test';
-    $dbuser = 'root';
-    $dbpass = "";
-    $conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
-    $result = mysqli_query($conn, "SELECT * FROM users");
+    include_once("config.php");
+    $result = mysqli_query($mysqli, "SELECT * FROM users");
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +20,7 @@
         <td>Age</td>
         <td>Email</td>
         <td>Created</td>
+        <td>Update</td>
         </tr>
         <tr>
             <td>Juan dela Cruz</td>
@@ -38,7 +36,9 @@
             echo "<td>".$res['age']."</td>";
             echo "<td>".$res['email']."</td>";
             echo "<td>".$res['date_created']."</td>";
-            echo "<tr>";
+            echo "<td><a href=\"edit.php?id=$res[id]\">Edit</a>";
+            echo "</tr>";
+
         }
         ?>
         
