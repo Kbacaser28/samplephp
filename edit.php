@@ -32,7 +32,6 @@
     }
 ?>
 
-
 <?php
     $id = $_GET['id'];
     $result = mysqli_query($mysqli, "SELECT * FROM users WHERE id=$id");

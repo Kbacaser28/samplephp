@@ -12,7 +12,7 @@
 </head>
 <body>
    
-    <h1><?php echo "Sample PHP APP"; ?></h1>
+    <h1><?php echo "Simple PHP Application Web Application"; ?></h1>
     <a href="add.html">Add new Data</a><br/><br/>
     <table>
         <tr>
@@ -36,7 +36,7 @@
             echo "<td>".$res['age']."</td>";
             echo "<td>".$res['email']."</td>";
             echo "<td>".$res['date_created']."</td>";
-            echo "<td><a href=\"edit.php?id=$res[id]\">Edit</a>";
+            echo "<td><a href=\"edit.php?id=$res[id]\">Edit</a> | <a href=\"delete.php?id=$res[id] \"onClick=\"return confirm('Are you sure want to DELETE this Record?')\">Delete</a></td>";
             echo "</tr>";
 
         }
